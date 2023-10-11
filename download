@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+wget -O grounded_segment_anything/EfficientSAM/sam_hq_vit_tiny.pth https://huggingface.co/lkeab/hq-sam/resolve/main/sam_hq_vit_tiny.pth
+wget -O grounded_segment_anything/groundingdino_swint_ogc.pth https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth

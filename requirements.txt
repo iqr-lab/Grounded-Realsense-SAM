@@ -1,0 +1,4 @@
+# Dependencies for the Grounded Realsense SAM
+
+Pyside6
+qimage2ndarray
