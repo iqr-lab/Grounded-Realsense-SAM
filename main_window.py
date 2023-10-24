@@ -1,17 +1,18 @@
-from PySide6.QtWidgets import (
-    QLabel,
-    QVBoxLayout,
-    QHBoxLayout,
-    QWidget,
-    QMainWindow,
-    QLineEdit,
-    QPushButton,
-)
-from PySide6.QtGui import QPixmap
-from PySide6.QtCore import Slot, Qt
-from camera import Camera
 import numpy as np
 import qimage2ndarray
+from PySide6.QtCore import Qt, Slot
+from PySide6.QtGui import QPixmap
+from PySide6.QtWidgets import (
+    QHBoxLayout,
+    QLabel,
+    QLineEdit,
+    QMainWindow,
+    QPushButton,
+    QVBoxLayout,
+    QWidget,
+)
+
+from camera import Camera
 
 
 class MainWindow(QMainWindow):

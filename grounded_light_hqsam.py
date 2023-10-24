@@ -1,19 +1,18 @@
 import cv2
 import numpy as np
 import supervision as sv
-
 import torch
 import torchvision
-
-from groundingdino.util.inference import Model, annotate
+from groundingdino.util.inference import Model
 from segment_anything import SamPredictor
-from grounded_segment_anything.EfficientSAM.LightHQSAM.tiny_vit_sam import TinyViT
 from segment_anything.modeling import (
     MaskDecoderHQ,
     PromptEncoder,
     Sam,
     TwoWayTransformer,
 )
+
+from grounded_segment_anything.EfficientSAM.LightHQSAM.tiny_vit_sam import TinyViT
 
 
 def setup_model():
@@ -132,7 +131,7 @@ class GroundedLightHQSAM:
             sam_predictor.set_image(image)
             result_masks = []
             for box in xyxy:
-                masks, scores, logits = sam_predictor.predict(
+                masks, scores, _ = sam_predictor.predict(
                     box=box,
                     multimask_output=False,
                     hq_token_only=True,
