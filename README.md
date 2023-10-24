@@ -1,5 +1,7 @@
 # Grounded Realsense Segment Anything
 
+![Black Format Workflow](https://github.com/iqr-lab/Grounded-Realsense-SAM/actions/workflows/lint.yml/badge.svg?event=push)
+
 Application and framework for using Grounded-SAM (Grounded-DINO + SAM) with Realsense camera(s).
 
 ## Installation
