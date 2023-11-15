@@ -16,13 +16,15 @@ from camera import Camera
 
 
 class MainWindow(QMainWindow):
-    def __init__(self, color_q, depth_q, app):
+    def __init__(self, color_q, depth_q, app, num_cams=1):
         QMainWindow.__init__(self)
         self.setWindowTitle("IQR Lab Stream")
 
         self.widget = QWidget()
 
         # Camera Components
+        self.color_labels = [QLabel(self.widget) for _ in range(num_cams)]
+        self.depth_labels = [QLabel(self.widget) for _ in range(num_cams)]
         self.color_label = QLabel(self.widget)
         self.depth_label = QLabel(self.widget)
 
